@@ -28,93 +28,101 @@ namespace TYPO3\Lvcontentslider\Controller;
  * @package lvcontentslider
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class SliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class SliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+{
 
-	/**
-	 * sliderRepository
-	 *
-	 * @var \TYPO3\Lvcontentslider\Domain\Repository\SliderRepository
-	 * @inject
-	 */
-	protected $sliderRepository = NULL;
-
-	/**
-	 * action list
-	 *
-	 * @return void
-	 */
-	public function listAction() {
-		$slider = $this->sliderRepository->findAll();
-		$this->view->assign('test', '// test test');
-		// \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['storagePid'],'pid');
-		$this->view->assign('slider', $slider);
-	}
-
-	/**
-	 * action show
-	 *
-	 * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $slider
-	 * @return void
-	 */
-	public function showAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $slider) {
-		$this->view->assign('slider', $slider);
-	}
-
-	/**
-	 * action new
-	 *
-	 * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $newSlider
-	 * @dontvalidate $newSlider
-	 * @return void
-	 */
-	public function newAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $newSlider = NULL) {
-		$this->view->assign('newSlider', $newSlider);
-	}
-
-	/**
-	 * action create
-	 *
-	 * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $newSlider
-	 * @return void
-	 */
-	public function createAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $newSlider) {
-		$this->sliderRepository->add($newSlider);
-		$this->flashMessageContainer->add('Your new Slider was created.');
-		$this->redirect('list');
-	}
-
-	/**
-	 * action edit
-	 *
-	 * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $slider
-	 * @return void
-	 */
-	public function editAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $slider) {
-		$this->view->assign('slider', $slider);
-	}
-
-	/**
-	 * action update
-	 *
-	 * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $slider
-	 * @return void
-	 */
-	public function updateAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $slider) {
-		$this->sliderRepository->update($slider);
-		$this->flashMessageContainer->add('Your Slider was updated.');
-		$this->redirect('list');
-	}
-
-	/**
-	 * action delete
-	 *
-	 * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $slider
-	 * @return void
-	 */
-	public function deleteAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $slider) {
-		$this->sliderRepository->remove($slider);
-		$this->flashMessageContainer->add('Your Slider was removed.');
-		$this->redirect('list');
-	}
+    /**
+     * sliderRepository
+     *
+     * @var \TYPO3\Lvcontentslider\Domain\Repository\SliderRepository
+     * @inject
+     */
+    protected $sliderRepository = NULL;
+    
+    /**
+     * action list
+     *
+     * @return void
+     */
+    public function listAction()
+    {
+        $slider = $this->sliderRepository->findAll();
+        $this->view->assign('test', '// test test');
+        // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings['storagePid'],'pid');
+        $this->view->assign('slider', $slider);
+    }
+    
+    /**
+     * action show
+     *
+     * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $slider
+     * @return void
+     */
+    public function showAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $slider)
+    {
+        $this->view->assign('slider', $slider);
+    }
+    
+    /**
+     * action new
+     *
+     * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $newSlider
+     * @dontvalidate $newSlider
+     * @return void
+     */
+    public function newAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $newSlider = NULL)
+    {
+        $this->view->assign('newSlider', $newSlider);
+    }
+    
+    /**
+     * action create
+     *
+     * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $newSlider
+     * @return void
+     */
+    public function createAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $newSlider)
+    {
+        $this->sliderRepository->add($newSlider);
+        $this->flashMessageContainer->add('Your new Slider was created.');
+        $this->redirect('list');
+    }
+    
+    /**
+     * action edit
+     *
+     * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $slider
+     * @return void
+     */
+    public function editAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $slider)
+    {
+        $this->view->assign('slider', $slider);
+    }
+    
+    /**
+     * action update
+     *
+     * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $slider
+     * @return void
+     */
+    public function updateAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $slider)
+    {
+        $this->sliderRepository->update($slider);
+        $this->flashMessageContainer->add('Your Slider was updated.');
+        $this->redirect('list');
+    }
+    
+    /**
+     * action delete
+     *
+     * @param \TYPO3\Lvcontentslider\Domain\Model\Slider $slider
+     * @return void
+     */
+    public function deleteAction(\TYPO3\Lvcontentslider\Domain\Model\Slider $slider)
+    {
+        $this->sliderRepository->remove($slider);
+        $this->flashMessageContainer->add('Your Slider was removed.');
+        $this->redirect('list');
+    }
 
 }

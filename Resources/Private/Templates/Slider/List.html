@@ -15,14 +15,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="main">
 <h1>Listing for Slider</h1>
 
-<f:flashMessages renderMode="div" />
+<f:flashMessages />
 
-<table  class="tx_lvslider" >
+<table  class="tx_lvcontentslider" >
 	<tr>
-		<th><f:translate key="tx_lvslider_domain_model_slider.bezeichnung" /></th>
-		<th><f:translate key="tx_lvslider_domain_model_slider.titel" /></th>
-		<th><f:translate key="tx_lvslider_domain_model_slider.text" /></th>
-		<th><f:translate key="tx_lvslider_domain_model_slider.bild" /></th>
+		<th><f:translate key="tx_lvcontentslider_domain_model_slider.bezeichnung" /></th>
+		<th><f:translate key="tx_lvcontentslider_domain_model_slider.titel" /></th>
+		<th><f:translate key="tx_lvcontentslider_domain_model_slider.text" /></th>
+		<th><f:translate key="tx_lvcontentslider_domain_model_slider.buttontext" /></th>
+		<th><f:translate key="tx_lvcontentslider_domain_model_slider.link" /></th>
+		<th><f:translate key="tx_lvcontentslider_domain_model_slider.bild" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
@@ -32,6 +34,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<td><f:link.action action="show" arguments="{slider : slider}"> {slider.bezeichnung}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{slider : slider}"> {slider.titel}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{slider : slider}"> {slider.text}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{slider : slider}"> {slider.buttontext}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{slider : slider}"> {slider.link}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{slider : slider}"> {slider.bild.originalResource.name}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{slider : slider}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{slider : slider}">Delete</f:link.action></td>

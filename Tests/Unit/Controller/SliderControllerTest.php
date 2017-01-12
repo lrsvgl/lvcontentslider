@@ -3,7 +3,7 @@ namespace TYPO3\Lvcontentslider\Tests\Unit\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2016 
+ *  (c) 2017 
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -27,25 +27,29 @@ namespace TYPO3\Lvcontentslider\Tests\Unit\Controller;
  * Test case for class TYPO3\Lvcontentslider\Controller\SliderController.
  *
  */
-class SliderControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
+class SliderControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+{
 
 	/**
 	 * @var \TYPO3\Lvcontentslider\Controller\SliderController
 	 */
 	protected $subject = NULL;
 
-	protected function setUp() {
+	public function setUp()
+	{
 		$this->subject = $this->getMock('TYPO3\\Lvcontentslider\\Controller\\SliderController', array('redirect', 'forward', 'addFlashMessage'), array(), '', FALSE);
 	}
 
-	protected function tearDown() {
+	public function tearDown()
+	{
 		unset($this->subject);
 	}
 
 	/**
 	 * @test
 	 */
-	public function listActionFetchesAllSlidersFromRepositoryAndAssignsThemToView() {
+	public function listActionFetchesAllSlidersFromRepositoryAndAssignsThemToView()
+	{
 
 		$allSliders = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array(), array(), '', FALSE);
 
@@ -63,7 +67,8 @@ class SliderControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function showActionAssignsTheGivenSliderToView() {
+	public function showActionAssignsTheGivenSliderToView()
+	{
 		$slider = new \TYPO3\Lvcontentslider\Domain\Model\Slider();
 
 		$view = $this->getMock('TYPO3\\CMS\\Extbase\\Mvc\\View\\ViewInterface');
@@ -76,20 +81,8 @@ class SliderControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function newActionAssignsTheGivenSliderToView() {
-		$slider = new \TYPO3\Lvcontentslider\Domain\Model\Slider();
-
-		$view = $this->getMock('TYPO3\\CMS\\Extbase\\Mvc\\View\\ViewInterface');
-		$view->expects($this->once())->method('assign')->with('newSlider', $slider);
-		$this->inject($this->subject, 'view', $view);
-
-		$this->subject->newAction($slider);
-	}
-
-	/**
-	 * @test
-	 */
-	public function createActionAddsTheGivenSliderToSliderRepository() {
+	public function createActionAddsTheGivenSliderToSliderRepository()
+	{
 		$slider = new \TYPO3\Lvcontentslider\Domain\Model\Slider();
 
 		$sliderRepository = $this->getMock('TYPO3\\Lvcontentslider\\Domain\\Repository\\SliderRepository', array('add'), array(), '', FALSE);
@@ -102,7 +95,8 @@ class SliderControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function editActionAssignsTheGivenSliderToView() {
+	public function editActionAssignsTheGivenSliderToView()
+	{
 		$slider = new \TYPO3\Lvcontentslider\Domain\Model\Slider();
 
 		$view = $this->getMock('TYPO3\\CMS\\Extbase\\Mvc\\View\\ViewInterface');
@@ -115,7 +109,8 @@ class SliderControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function updateActionUpdatesTheGivenSliderInSliderRepository() {
+	public function updateActionUpdatesTheGivenSliderInSliderRepository()
+	{
 		$slider = new \TYPO3\Lvcontentslider\Domain\Model\Slider();
 
 		$sliderRepository = $this->getMock('TYPO3\\Lvcontentslider\\Domain\\Repository\\SliderRepository', array('update'), array(), '', FALSE);
@@ -128,7 +123,8 @@ class SliderControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function deleteActionRemovesTheGivenSliderFromSliderRepository() {
+	public function deleteActionRemovesTheGivenSliderFromSliderRepository()
+	{
 		$slider = new \TYPO3\Lvcontentslider\Domain\Model\Slider();
 
 		$sliderRepository = $this->getMock('TYPO3\\Lvcontentslider\\Domain\\Repository\\SliderRepository', array('remove'), array(), '', FALSE);

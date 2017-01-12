@@ -1,19 +1,22 @@
-
-plugin.tx_lvslider {
+plugin.tx_lvcontentslider_slider {
 	view {
-		# cat=plugin.tx_lvslider/file; type=string; label=Path to template root (FE)
+		# cat=plugin.tx_lvcontentslider_slider/file; type=string; label=Path to template root (FE)
 		templateRootPath = EXT:lvcontentslider/Resources/Private/Templates/
-		# cat=plugin.tx_lvslider/file; type=string; label=Path to template partials (FE)
+		# cat=plugin.tx_lvcontentslider_slider/file; type=string; label=Path to template partials (FE)
 		partialRootPath = EXT:lvcontentslider/Resources/Private/Partials/
-		# cat=plugin.tx_lvslider/file; type=string; label=Path to template layouts (FE)
+		# cat=plugin.tx_lvcontentslider_slider/file; type=string; label=Path to template layouts (FE)
 		layoutRootPath = EXT:lvcontentslider/Resources/Private/Layouts/
 	}
 	persistence {
-		# cat=plugin.tx_lvslider//a; type=string; label=Default storage PID
+		# cat=plugin.tx_lvcontentslider_slider//a; type=string; label=Default storage PID
 		storagePid =
 	}
 	settings {
-		# cat=plugin.tx_lvslider//a; type=string; label=Default Slider Intervall (ms)
-		dataIntervall = 4500
+		# cat=plugin.tx_lvcontentslider_slider//a; type=string; label=Default Slider Intervall (ms)
+		dataInterval = 4500
+		# cat=plugin.tx_lvcontentslider_slider//a; type=string; label=Bild Breite
+		imgWidth = 788c
+		# cat=plugin.tx_lvcontentslider_slider//a; type=string; label=Bild Höhe
+		imgHeight = 563c
 	}
 }

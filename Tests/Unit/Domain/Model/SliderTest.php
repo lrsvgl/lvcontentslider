@@ -5,7 +5,7 @@ namespace TYPO3\Lvcontentslider\Tests\Unit\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2016 
+ *  (c) 2017 
  *
  *  All rights reserved
  *
@@ -33,24 +33,28 @@ namespace TYPO3\Lvcontentslider\Tests\Unit\Domain\Model;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class SliderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
+class SliderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+{
 	/**
 	 * @var \TYPO3\Lvcontentslider\Domain\Model\Slider
 	 */
 	protected $subject = NULL;
 
-	protected function setUp() {
+	public function setUp()
+	{
 		$this->subject = new \TYPO3\Lvcontentslider\Domain\Model\Slider();
 	}
 
-	protected function tearDown() {
+	public function tearDown()
+	{
 		unset($this->subject);
 	}
 
 	/**
 	 * @test
 	 */
-	public function getBezeichnungReturnsInitialValueForString() {
+	public function getBezeichnungReturnsInitialValueForString()
+	{
 		$this->assertSame(
 			'',
 			$this->subject->getBezeichnung()
@@ -60,7 +64,8 @@ class SliderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function setBezeichnungForStringSetsBezeichnung() {
+	public function setBezeichnungForStringSetsBezeichnung()
+	{
 		$this->subject->setBezeichnung('Conceived at T3CON10');
 
 		$this->assertAttributeEquals(
@@ -73,7 +78,8 @@ class SliderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function getTitelReturnsInitialValueForString() {
+	public function getTitelReturnsInitialValueForString()
+	{
 		$this->assertSame(
 			'',
 			$this->subject->getTitel()
@@ -83,7 +89,8 @@ class SliderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function setTitelForStringSetsTitel() {
+	public function setTitelForStringSetsTitel()
+	{
 		$this->subject->setTitel('Conceived at T3CON10');
 
 		$this->assertAttributeEquals(
@@ -96,7 +103,8 @@ class SliderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function getTextReturnsInitialValueForString() {
+	public function getTextReturnsInitialValueForString()
+	{
 		$this->assertSame(
 			'',
 			$this->subject->getText()
@@ -106,7 +114,8 @@ class SliderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function setTextForStringSetsText() {
+	public function setTextForStringSetsText()
+	{
 		$this->subject->setText('Conceived at T3CON10');
 
 		$this->assertAttributeEquals(
@@ -119,7 +128,58 @@ class SliderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function getBildReturnsInitialValueForFileReference() {
+	public function getButtontextReturnsInitialValueForString()
+	{
+		$this->assertSame(
+			'',
+			$this->subject->getButtontext()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setButtontextForStringSetsButtontext()
+	{
+		$this->subject->setButtontext('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'buttontext',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getLinkReturnsInitialValueForString()
+	{
+		$this->assertSame(
+			'',
+			$this->subject->getLink()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setLinkForStringSetsLink()
+	{
+		$this->subject->setLink('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'link',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getBildReturnsInitialValueForFileReference()
+	{
 		$this->assertEquals(
 			NULL,
 			$this->subject->getBild()
@@ -129,7 +189,8 @@ class SliderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function setBildForFileReferenceSetsBild() {
+	public function setBildForFileReferenceSetsBild()
+	{
 		$fileReferenceFixture = new \TYPO3\CMS\Extbase\Domain\Model\FileReference();
 		$this->subject->setBild($fileReferenceFixture);
 

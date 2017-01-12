@@ -29,114 +29,181 @@ namespace TYPO3\Lvcontentslider\Domain\Model;
 /**
  * Slider
  */
-class Slider extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Slider extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+{
 
-	/**
-	 * bezeichnung
-	 *
-	 * @var string
-	 * @validate NotEmpty
-	 */
-	protected $bezeichnung = '';
-
-	/**
-	 * titel
-	 *
-	 * @var string
-	 * @validate NotEmpty
-	 */
-	protected $titel = '';
-
-	/**
-	 * text
-	 *
-	 * @var string
-	 * @validate NotEmpty
-	 */
-	protected $text = '';
-
-	/**
-	 * Bild
-	 *
-	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-	 * @validate NotEmpty
-	 */
-	protected $bild = NULL;
-
-	/**
-	 * Returns the bezeichnung
-	 *
-	 * @return string $bezeichnung
-	 */
-	public function getBezeichnung() {
-		return $this->bezeichnung;
-	}
-
-	/**
-	 * Sets the bezeichnung
-	 *
-	 * @param string $bezeichnung
-	 * @return void
-	 */
-	public function setBezeichnung($bezeichnung) {
-		$this->bezeichnung = $bezeichnung;
-	}
-
-	/**
-	 * Returns the bild
-	 *
-	 * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $bild
-	 */
-	public function getBild() {
-		return $this->bild;
-	}
-
-	/**
-	 * Sets the bild
-	 *
-	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $bild
-	 * @return void
-	 */
-	public function setBild(\TYPO3\CMS\Extbase\Domain\Model\FileReference $bild) {
-		$this->bild = $bild;
-	}
-
-	/**
-	 * Returns the titel
-	 *
-	 * @return string $titel
-	 */
-	public function getTitel() {
-		return $this->titel;
-	}
-
-	/**
-	 * Sets the titel
-	 *
-	 * @param string $titel
-	 * @return void
-	 */
-	public function setTitel($titel) {
-		$this->titel = $titel;
-	}
-
-	/**
-	 * Returns the text
-	 *
-	 * @return string $text
-	 */
-	public function getText() {
-		return $this->text;
-	}
-
-	/**
-	 * Sets the text
-	 *
-	 * @param string $text
-	 * @return void
-	 */
-	public function setText($text) {
-		$this->text = $text;
-	}
+    /**
+     * bezeichnung
+     *
+     * @var string
+     * @validate NotEmpty
+     */
+    protected $bezeichnung = '';
+    
+    /**
+     * titel
+     *
+     * @var string
+     * @validate NotEmpty
+     */
+    protected $titel = '';
+    
+    /**
+     * text
+     *
+     * @var string
+     * @validate NotEmpty
+     */
+    protected $text = '';
+    
+    /**
+     * buttontext
+     *
+     * @var string
+     * @validate NotEmpty
+     */
+    protected $buttontext = '';
+    
+    /**
+     * link
+     *
+     * @var string
+     * @validate NotEmpty
+     */
+    protected $link = '';
+    
+    /**
+     * Bild
+     *
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @validate NotEmpty
+     */
+    protected $bild = NULL;
+    
+    /**
+     * Returns the bezeichnung
+     *
+     * @return string $bezeichnung
+     */
+    public function getBezeichnung()
+    {
+        return $this->bezeichnung;
+    }
+    
+    /**
+     * Sets the bezeichnung
+     *
+     * @param string $bezeichnung
+     * @return void
+     */
+    public function setBezeichnung($bezeichnung)
+    {
+        $this->bezeichnung = $bezeichnung;
+    }
+    
+    /**
+     * Returns the bild
+     *
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $bild
+     */
+    public function getBild()
+    {
+        return $this->bild;
+    }
+    
+    /**
+     * Sets the bild
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $bild
+     * @return void
+     */
+    public function setBild(\TYPO3\CMS\Extbase\Domain\Model\FileReference $bild)
+    {
+        $this->bild = $bild;
+    }
+    
+    /**
+     * Returns the titel
+     *
+     * @return string $titel
+     */
+    public function getTitel()
+    {
+        return $this->titel;
+    }
+    
+    /**
+     * Sets the titel
+     *
+     * @param string $titel
+     * @return void
+     */
+    public function setTitel($titel)
+    {
+        $this->titel = $titel;
+    }
+    
+    /**
+     * Returns the text
+     *
+     * @return string $text
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+    
+    /**
+     * Sets the text
+     *
+     * @param string $text
+     * @return void
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+    }
+    
+    /**
+     * Returns the buttontext
+     *
+     * @return string $buttontext
+     */
+    public function getButtontext()
+    {
+        return $this->buttontext;
+    }
+    
+    /**
+     * Sets the buttontext
+     *
+     * @param string $buttontext
+     * @return void
+     */
+    public function setButtontext($buttontext)
+    {
+        $this->buttontext = $buttontext;
+    }
+    
+    /**
+     * Returns the link
+     *
+     * @return string $link
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
+    
+    /**
+     * Sets the link
+     *
+     * @param string $link
+     * @return void
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
+    }
 
 }

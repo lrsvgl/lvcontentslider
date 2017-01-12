@@ -1,15 +1,17 @@
 
-plugin.tx_lvslider {
+plugin.tx_lvcontentslider_slider {
 	view {
-		templateRootPath = {$plugin.tx_lvslider.view.templateRootPath}
-		partialRootPath = {$plugin.tx_lvslider.view.partialRootPath}
-		layoutRootPath = {$plugin.tx_lvslider.view.layoutRootPath}
+		templateRootPaths.0 = {$plugin.tx_lvcontentslider_slider.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_lvcontentslider_slider.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_lvcontentslider_slider.view.layoutRootPath}
 	}
 	persistence {
-		storagePid = {$plugin.tx_lvslider.persistence.storagePid}
+		storagePid = {$plugin.tx_lvcontentslider_slider.persistence.storagePid}
 	}
 	settings {
-		dataIntervall = {$plugin.tx_lvslider.settings.dataIntervall}
+		dataInterval = {$plugin.tx_lvcontentslider_slider.settings.dataInterval}
+		imgWidth = {$plugin.tx_lvcontentslider_slider.settings.imgWidth}
+		imgHeight = {$plugin.tx_lvcontentslider_slider.settings.imgHeight}
 	}
 	features {
 		# uncomment the following line to enable the new Property Mapper.
@@ -17,7 +19,7 @@ plugin.tx_lvslider {
 	}
 }
 
-plugin.tx_lvslider._CSS_DEFAULT_STYLE (
+plugin.tx_lvcontentslider._CSS_DEFAULT_STYLE (
 	textarea.f3-form-error {
 		background-color:#FF9F9F;
 		border: 1px #FF0000 solid;
@@ -28,16 +30,16 @@ plugin.tx_lvslider._CSS_DEFAULT_STYLE (
 		border: 1px #FF0000 solid;
 	}
 
-	.tx-lv-slider table {
+	.tx-lvcontentslider table {
 		border-collapse:separate;
 		border-spacing:10px;
 	}
 
-	.tx-lv-slider table th {
+	.tx-lvcontentslider table th {
 		font-weight:bold;
 	}
 
-	.tx-lv-slider table td {
+	.tx-lvcontentslider table td {
 		vertical-align:top;
 	}
 
@@ -48,5 +50,4 @@ plugin.tx_lvslider._CSS_DEFAULT_STYLE (
 	.typo3-messages .message-ok {
 		color:green;
 	}
-
 )

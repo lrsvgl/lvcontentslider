@@ -8,7 +8,7 @@
 .. _start:
 
 =============================================================
-Slider
+Content Slider
 =============================================================
 
 .. only:: html
@@ -23,13 +23,13 @@ Slider
 		en
 
 	:Description:
-		periodische Slider nach Monaten
+		Text/Bild Slider
 
 	:Keywords:
 		comma,separated,list,of,keywords
 
 	:Copyright:
-		2016
+		2017
 
 	:Author:
 
@@ -48,9 +48,8 @@ Slider
 	**Table of Contents**
 
 .. toctree::
-	:maxdepth: 5
+	:maxdepth: 3
 	:titlesonly:
-	:glob:
 
 	Introduction/Index
 	User/Index
@@ -60,4 +59,4 @@ Slider
 	KnownProblems/Index
 	ToDoList/Index
 	ChangeLog/Index
-	Targets
+	Links

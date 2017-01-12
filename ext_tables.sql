@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_lvslider_domain_model_slider'
+# Table structure for table 'tx_lvcontentslider_domain_model_slider'
 #
-CREATE TABLE tx_lvslider_domain_model_slider (
+CREATE TABLE tx_lvcontentslider_domain_model_slider (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -9,6 +9,8 @@ CREATE TABLE tx_lvslider_domain_model_slider (
 	bezeichnung varchar(255) DEFAULT '' NOT NULL,
 	titel varchar(255) DEFAULT '' NOT NULL,
 	text text NOT NULL,
+	buttontext varchar(255) DEFAULT '' NOT NULL,
+	link varchar(255) DEFAULT '' NOT NULL,
 	bild int(11) unsigned NOT NULL default '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,

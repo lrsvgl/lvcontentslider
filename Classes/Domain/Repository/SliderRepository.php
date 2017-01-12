@@ -28,11 +28,12 @@ namespace TYPO3\Lvcontentslider\Domain\Repository;
  * @package lvcontentslider
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class SliderRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+class SliderRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+{
 
-	protected $defaultOrderings = array(
-		'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-		'uid' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
-	);
+    protected $defaultOrderings = array(
+        'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+        'uid' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+    );
 
 }
