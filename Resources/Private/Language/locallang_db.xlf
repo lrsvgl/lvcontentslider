@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-01-14T15:25:05Z" product-name="lvcontentslider">
+		<header/>
+		<body>
+			<trans-unit id="tx_lvslider_domain_model_slider">
+				<source>Slider</source>
+			</trans-unit>
+			<trans-unit id="tx_lvslider_domain_model_slider.bezeichnung">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_lvslider_domain_model_slider.titel">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_lvslider_domain_model_slider.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_lvslider_domain_model_slider.bild">
+				<source>Bild</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

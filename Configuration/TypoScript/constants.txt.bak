@@ -1,0 +1,19 @@
+
+plugin.tx_lvslider {
+	view {
+		# cat=plugin.tx_lvslider/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:lvcontentslider/Resources/Private/Templates/
+		# cat=plugin.tx_lvslider/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:lvcontentslider/Resources/Private/Partials/
+		# cat=plugin.tx_lvslider/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:lvcontentslider/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_lvslider//a; type=string; label=Default storage PID
+		storagePid =
+	}
+	settings {
+		# cat=plugin.tx_lvslider//a; type=string; label=Default Slider Intervall (ms)
+		dataIntervall = 4500
+	}
+}
